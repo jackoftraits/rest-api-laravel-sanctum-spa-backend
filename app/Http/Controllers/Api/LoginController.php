@@ -24,6 +24,9 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
+        # get validator errors by key
+        
+
         if ($validator->fails()) {
             return response()->json([
                 'message' => 'The data is invalid.',
@@ -40,7 +43,7 @@ class LoginController extends Controller
             return response()->json([
                 'message' => 'Invalid',
                 'errors' => [
-                    'password' => 'The password does not belong to the user account.',
+                    'password' => ['The password does not belong to the user account.'],
                 ],
             ], 422);
         }
