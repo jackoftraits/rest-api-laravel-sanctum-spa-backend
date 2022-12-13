@@ -22,10 +22,7 @@ class LoginController extends Controller
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
             'password' => 'required',
-        ]);
-
-        # get validator errors by key
-        
+        ]);        
 
         if ($validator->fails()) {
             return response()->json([
