@@ -34,7 +34,7 @@ class UsersTableSeeder extends Seeder
             'first_name' => $this->faker->firstName(),
             'last_name' => $this->faker->lastName(),
             'email' => $this->faker->safeEmail(),
-            'password' => Hash::make('jackoftraits'),
+            'password' => Hash::make('sentgine'),
         ]);
     }
 }
